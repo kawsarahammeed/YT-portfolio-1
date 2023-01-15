@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    letter-spacing: 0.4px;
+    transition: .4s ease;
+}
+
+:root{
+    --color-black:#292929;
+    --color-gry:#9D9D9D;
+    --color-white:#DEDEDE;
+    --color-light:#959595;
+    --color-main-white: #ffff;
+    --btn-color:#9D9D9D;
+}
+
+h1{
+   color: var(--color-white); 
+   font-size: 64px;
+   line-height: 70px;
+   font-weight: 700;
+   width: fit-content;
+}
+p{
+    color: var(--color-light);
+    width: fit-content;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+}
+
+.btn{
+    display: inline-block;
+    padding: 16px 48px;
+    background: var(--btn-color);
+    color: var(--color-main-white);
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+.btn:hover{
+    opacity: 0.4;
+}
+body{
+    background: var(--color-black);
+    color: var(--color-main-white);
+}
+.container{
+    max-width: 1308px;
+    width: 96%;
+    margin: 0 auto;
+}
+
+/* ................NAVBAR START................ */
+nav{
+    background: rgba(50, 50, 50, 0.7);
+    height: 88px;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.bluer{
+    position: absolute;
+    width: 100%;
+    height: 85px;
+    background: rgba(50, 50, 50, 0.7);
+    top: 0;
+    z-index: -9;
+    filter: blur(4px);
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.nav-container .logo{
+    width: 136px;
+    height: 40px;
+
+}
+.nav-container .logo img{
+    height: 100%;
+    width: 100%;
+}
+.nav-container ul{
+    display: flex;
+    gap: 60px;
+    margin: 0;
+    align-items: center;
+}
+.nav-container ul li a{
+    font-size: 18px;
+    line-height: 700;
+    line-height: 25px;
+    color: var(--color-white);
+    border-bottom: 4px solid transparent;
+}
+.nav-container ul li:hover a{
+    border-bottom: 4px solid var(--color-white);
+}
+/* ................NAVBAR END............... */
+
+/* ................HERO SECTION START............... */
+.hero-container{
+    padding-top: 210px;
+    display: grid;
+    grid-template-columns: 50% 40%;
+    gap: 160px; 
+}
+.hero-container h1{
+    margin-bottom: 24px;
+}
+.hero-container p{
+    margin-bottom: 64px;
+    padding-right: 130px;
+}
+
+
+/* ................HERO SECTION END............... */
+
+
+/* ................Work SECTION END............... */
+.work-container .work-title{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 173px;
+}
+.work-container .work-title small{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+.featured{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    gap: 24px;
+    margin:0 auto;
+}
+.featured-box{
+    position: relative;  
+    height: max-content;
+    overflow: hidden; 
+    border-radius: 4px; 
+    width: max-content;
+}
+.featured-box:hover .featured-shadow{ 
+    bottom: 0;
+}
+.featured-shadow{   
+    background: rgba(0, 0, 0, 0.846);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    line-height: 55px;
+    font-weight: 700;
+    color: var(--color-white);
+    bottom: -100%;
+}
+.featured-img{
+    width: 600px;
+    height: 700px;
+}
+.featured-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    justify-content: center;
+    text-align: center;
+}
+.f-bottom{
+    margin-top: 140px;
+}
+.fb-2{
+    margin-top: -100px; 
+}
+.fb-4{
+    margin-top: 40px;
+}
+/* ................Work SECTION END............... */
+
+/* ................visual SECTION strart............... */
+.visual-container .visual-title h2{
+    line-height: 49px;
+    font-size: 36px;
+    text-align: center;
+    color: var(--color-white);
+    margin-top: 240px;
+    margin-bottom: 64px;
+}
+.visual{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.visual-box{
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+}
+.visual-box:hover img{
+    transform: scale(1.3);
+}
+.visual-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* ................visual SECTION END............... */
+
+/* ................project SECTION END............... */
+.Projects-title h2{
+    line-height: 49px;
+    font-size: 36px;
+    text-align: center;
+    color: var(--color-white);
+    margin-top: 240px;
+    margin-bottom: 64px; 
+}
+.personal-project{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.project-img{
+    height: 560px;
+    width: 400px;
+    overflow: hidden;
+}
+.project-img:hover img{
+    filter: saturate(1);
+    transform: scale(1.1);
+}
+.project-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0);
+}
+/* ................project SECTION END............... */
+
+/* ................CONTACT SECTION START............... */
+
+.contact-title h2{
+    line-height: 49px;
+    font-size: 36px;
+    text-align: center;
+    color: var(--color-white);
+    margin-top: 240px;
+    margin-bottom: 64px; 
+}
+.contact-container p{
+    width: 580px;
+    margin: 0 auto; 
+    text-align: center;   
+    padding-bottom: 43px;
+}
+.contact-container{ 
+    text-align: center;
+
+}
+/* ................CONTACT SECTION END............... */
+
+/* ................FOOTER SECTION START............... */
+footer{
+    height: 120px;
+    margin-top: 120px;
+    border-top: 1px solid var(--color-gry);
+
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.footer-left-content{
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 600;
+    color: var(--color-gry);
+}
+.footer-left-content span{
+    color: var(--color-main-white);
+}
+.footer-right-content .social{
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    align-items: center;
+}
+/* ................FOOTER SECTION END............... */
